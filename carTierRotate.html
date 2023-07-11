@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Design</title>
+    <style>
+        #main{
+            height:600px;
+            background-color: aqua;
+        }
+        #road{
+            height:134px;
+            background-color: black;
+            position: relative;
+            top:500px;
+        }
+        #carBody{
+            height: 250px;
+            width:30%;
+            /* background-color: red; */
+            position: relative;
+            top:110px;
+            animation-name:car;
+            animation-duration: 4s;
+            /* animation-delay: 0.5ms; */
+            animation-iteration-count: infinite;
+        }
+        @keyframes car{
+            from{
+                top:110px;
+                left:0px;
+            }
+            to{
+                top:110px;
+                left: 800px;
+            }
+        }
+       
+        #top{
+            height:100px;
+            background-color: aqua;
+            border: 2px solid aqua;
+            width:270px ;
+        }
+        .topLeft{
+            width: 160px;
+            height: 100px;
+            border: 2px solid black;
+            float: left;
+            /* border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px; */
+            background-color: red;
+        }
+        .topRight{
+            /* border-right: 2px solid yellow; */
+            width: 102px;
+            height: 100px;
+            border: 2px solid black;
+            float: left;
+            /* border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px; */
+            background-color: red;
+        }
+        .glassLeft{
+            width: 130px;
+            height: 70px;
+            /* border: 2px solid black; */
+            /* float: left; */
+            background-color:beige;
+            margin-top: 10px;
+            margin-left: 15px;
+            border-left: 2px solid black;
+            /* width: 50%; */
+            /* transform: rotate(45deg);
+            transform-origin: top left; */
+        }
+        .glassRight{
+            width: 80px;
+            height: 70px;
+            /* border: 2px solid black; */
+            /* float: left; */
+            background-color:beige;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+       
+        /* .lineRight{
+            border-right: 2px solid yellow;
+            height:100px;
+        } */
+        #mid{
+            height:100px;
+            background-color: red;
+            border: 2px solid black;
+            border-top-right-radius: 22px;
+            /* border-top-left-radius: 22px; */
+            border-bottom-right-radius:22px;
+            border-bottom-left-radius: 22px;
+        }
+        .subMid{
+            height:100px;
+            width:22%;
+            border:2px solid black;
+            float:left;
+        }
+        .subMid3{
+            width:104px;
+        }
+        .borderLeft{
+            /* border-top-left-radius: 20px; */
+            border-bottom-left-radius: 20px;
+        }
+        .borderRight{
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+        #handle{
+            width:20px;
+            height: 8px;
+            background-color: black;
+            margin-top: 20PX;
+            margin-left: 5px;
+        }
+        #bot{
+            height:50px;
+            /* background-color: black;
+            border: 2px solid red; */
+        }
+        .tierOut{
+            width:50px;
+            height:50px;
+            background-color: black;
+            /* border:2px solid yellow; */
+            float:left;
+            margin-left:60px;
+            border-radius: 50%;
+            border-top: 4px solid red;
+            animation-name:tier;
+            animation-duration: 2s;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            
+        }
+        .margin{
+            margin-left: 120px;
+        }
+        .tierIn{
+            width:30px;
+            height:30px;
+            background-color: white;
+            /* border:2px solid yellow; */
+            /* float:left; */
+            /* margin-left:60px; */
+            
+            border-radius: 50%;
+            margin:10px;
+            
+        }
+        @keyframes tier {
+            from{
+                transform: rotateX(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="road"></div>
+        <div id="carBody">
+            <div id="top">
+                <div class="topLeft">
+                    <div class="glassLeft topLeft">
+
+                    </div>
+                </div>
+                <div class="topRight">
+                    <div class="glassRight topRight">
+            
+                    </div>
+                </div>
+                
+            </div>
+            <div id="mid">
+                <div class="subMid borderLeft"></div>
+                <div class="subMid"></div>
+                <div class="subMid subMid3">
+                    <div id="handle"></div>
+                </div>
+                <div class="subMid borderRight"></div>
+            </div>
+            <div id="bot">
+                <div class="tierOut">
+                    <div class="tierIn"></div>
+                </div>
+                <div class="tierOut margin">
+                    <div class="tierIn"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
